@@ -1,0 +1,102 @@
+<header class="cabecera">
+
+  <div class="cabecera__contenido">
+
+    <!-- Nombre y logotipo -->
+    <a routerLink="/home" class="cabecera__marca">
+      <span class="cabecera__logo">☕</span>
+      <span class="cabecera__titulo">El rincón de Fernando</span>
+    </a>
+
+    <!-- Navegación principal -->
+
+    <nav class="cabecera__nav">
+
+      <a routerLink="/home" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">
+        Inicio
+      </a>
+
+      <a routerLink="/carta" routerLinkActive="activo">
+        Carta
+      </a>
+
+      @if (authService.sesionIniciada$ | async) {
+
+      <a routerLink="/mi_cuenta" routerLinkActive="activo">
+        Mi cuenta
+      </a>
+
+      <a (click)="cerrarSesion()">
+        Cerrar sesión
+      </a>
+
+      } @else {
+
+      <a routerLink="/login" routerLinkActive="activo">
+        Iniciar sesión
+      </a>
+
+      <a routerLink="/registro" routerLinkActive="activo" class="boton-registro">
+        Registrarse
+      </a>
+
+      }
+
+    </nav>
+
+
+    <!-- Botón para abrir el menú lateral -->
+    <button class="boton-lateral" (click)="alternarMenuLateral()" aria-label="Abrir información del local"
+      [attr.aria-expanded]="menuLateralAbierto">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+<!-- Fondo oscuro -->
+@if (menuLateralAbierto) {
+<div class="fondo-lateral" (click)="cerrarMenuLateral()">
+</div>
+}
+
+<!-- Menú lateral -->
+<aside class="barra-lateral" [class.barra-lateral--abierta]="menuLateralAbierto"
+  [attr.aria-hidden]="!menuLateralAbierto">
+
+  <div class="barra-lateral__cabecera">
+
+    <h2>El rincón de Fernando</h2>
+
+    <button class="boton-cerrar" (click)="cerrarMenuLateral()" aria-label="Cerrar menú">
+      ✕
+    </button>
+
+  </div>
+
+  <p class="barra-lateral__descripcion">
+    ¡Estamos encantados de recibirte!
+  </p>
+
+  <!-- Horario -->
+  <div class="informacion-local">
+
+    <div class="informacion-local__item">
+      <span>🕒</span>
+
+      <div>
+        <strong>Horario</strong>
+        <p>Lunes: 8:00AM-15:00PM 17:00PM-22:00PM</p>
+        <p>Martes: 8:00AM-15:00PM 17:00PM-22:00PM</p>
+        <p>Miércoles: 8:00AM-15:00PM 17:00PM-22:00PM</p>
+        <p>Jueves: 8:00AM-15:00PM 17:00PM-22:00PM</p>
+        <p>Viernes: 8:00AM-16:00PM 17:00PM-00:00AM</p>
+        <p>Sábados: CERRADO</p>
+        <p>Domingos: CERRADO</p>
+      </div>
+    </div>
+
+  </div>
+
+</aside>

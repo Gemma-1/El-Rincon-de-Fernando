@@ -1,0 +1,140 @@
+
+<section class="registro">
+
+  <div class="registro__cabecera">
+
+    <p class="etiqueta">EL RINCÓN DE FERNANDO</p>
+
+    <h1>Forma parte de nuestra familia</h1>
+
+    <p>
+      Crea tu cuenta, disfruta de nuestras visitas
+      y empieza a acumular puntos para conseguir desayunos gratis.
+    </p>
+
+  </div>
+
+  <div class="registro__contenido">
+
+    <div class="registro__informacion">
+
+      <span class="registro__icono">☕</span>
+
+      <h2>Un café, muchos momentos.</h2>
+
+      <p>
+        Queremos que cada visita tenga algo especial.
+        Regístrate en nuestra cafetería y disfruta
+        de nuestro club de puntos.
+      </p>
+
+      <div class="registro__ventaja">
+        <span>⭐</span>
+        <p>Consigue 10 puntos con cada visita validada.</p>
+      </div>
+
+      <div class="registro__ventaja">
+        <span>🎁</span>
+        <p>Alcanza 150 puntos y disfruta de un desayuno gratis.</p>
+      </div>
+
+    </div>
+
+    <div class="registro__formulario">
+
+      <h2>Crea tu cuenta</h2>
+
+      <p class="formulario__descripcion">
+        Completa tus datos para registrarte.
+      </p>
+
+      <form (ngSubmit)="registrarUsuario()" #formulario="ngForm">
+
+        <div class="campos-dobles">
+
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              [(ngModel)]="nombre"
+              placeholder="Tu nombre"
+              required>
+          </div>
+
+          <div class="campo">
+            <label for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              [(ngModel)]="apellidos"
+              placeholder="Tus apellidos"
+              required>
+          </div>
+
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="ejemplo@correo.com"
+            required>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            [(ngModel)]="telefono"
+            placeholder="Tu número de teléfono"
+            required>
+        </div>
+
+        <div class="campo">
+          <label for="password">Crea una contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Mínimo 6 caracteres"
+            required>
+        </div>
+
+        <div class="campo">
+          <label for="repetirPassword">Confirma tu contraseña</label>
+          <input
+            type="password"
+            id="repetirPassword"
+            name="repetirPassword"
+            [(ngModel)]="repetirPassword"
+            placeholder="Repite tu contraseña"
+            required>
+        </div>
+
+        <button type="submit" class="boton-registro">
+          Crear mi cuenta
+        </button>
+
+        @if (mensaje) {
+          <p class="mensaje">{{ mensaje }}</p>
+        }
+
+      </form>
+
+      <p class="registro__login">
+        ¿Ya formas parte de nuestra cafetería?
+        <a routerLink="/login">Inicia sesión</a>
+      </p>
+
+    </div>
+  </div>
+</section>

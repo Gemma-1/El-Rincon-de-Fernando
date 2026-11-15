@@ -1,0 +1,204 @@
+
+.login {
+  color: #35271f;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* CABECERA */
+.login__cabecera {
+  background: linear-gradient(120deg, #f2e4d2, #d6b99b);
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.etiqueta {
+  color: #98633e;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.login__cabecera h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 15px 0;
+}
+
+.login__cabecera > p:last-child {
+  color: #6d625b;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* CONTENIDO */
+.login__contenido {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* INFORMACIÓN */
+.login__informacion {
+  padding-top: 25px;
+}
+
+.login__icono {
+  font-size: 55px;
+}
+
+.login__informacion h2,
+.login__formulario h2 {
+  font-family: Georgia, serif;
+  color: #493225;
+  font-size: 29px;
+}
+
+.login__informacion > p {
+  color: #74675e;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.login__ventaja {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 15px;
+  background-color: #faf6f0;
+  border-left: 4px solid #98633e;
+}
+
+.login__ventaja span {
+  font-size: 25px;
+}
+
+.login__ventaja p {
+  margin: 0;
+  color: #493225;
+  line-height: 1.5;
+}
+
+/* FORMULARIO */
+.login__formulario {
+  background-color: #faf6f0;
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid #e8d9c8;
+}
+
+.login__formulario h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.formulario__descripcion {
+  color: #80634e;
+  margin-bottom: 28px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.campo label {
+  color: #493225;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.campo input {
+  padding: 13px;
+  border: 1px solid #d8c5b1;
+  border-radius: 5px;
+  background-color: #fffdf9;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.campo input:focus {
+  border-color: #98633e;
+}
+
+/* BOTONES */
+.boton-login,
+.boton-cancelar {
+  width: 100%;
+  padding: 14px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-login {
+  background-color: #70472f;
+  color: white;
+  border: none;
+}
+
+.boton-login:hover {
+  background-color: #4f3020;
+}
+
+.boton-cancelar {
+  margin-top: 12px;
+  background-color: transparent;
+  color: #70472f;
+  border: 1px solid #70472f;
+}
+
+.boton-cancelar:hover {
+  background-color: #eee1d2;
+}
+
+.mensaje {
+  color: #70472f;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.login__registro {
+  text-align: center;
+  color: #80634e;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.login__registro a {
+  color: #70472f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* MÓVILES */
+@media (max-width: 750px) {
+  .login__contenido {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 40px 20px;
+  }
+
+  .login__informacion {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .login__formulario {
+    padding: 25px 18px;
+  }
+}

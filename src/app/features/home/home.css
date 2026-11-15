@@ -1,0 +1,157 @@
+
+.inicio {
+  color: #35271f;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Portada principal */
+.portada {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 50px 8%;
+  background: linear-gradient(120deg, #f2e4d2, #d6b99b);
+}
+
+.portada-contenido {
+  max-width: 650px;
+}
+
+.etiqueta,
+.subtitulo {
+  color: #98633e;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.portada h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 6vw, 65px);
+  margin: 15px 0;
+  line-height: 1.1;
+}
+
+.descripcion {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.boton-principal {
+  display: inline-block;
+  background-color: #70472f;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+  background-color: #4f3020;
+}
+
+/* Sobre nosotros */
+.sobre-nosotros {
+  max-width: 850px;
+  margin: auto;
+  padding: 65px 25px;
+  text-align: center;
+}
+
+.sobre-nosotros h2,
+.destacados h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  margin: 12px 0 20px;
+}
+
+.sobre-nosotros > p:last-child {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6d625b;
+}
+
+/* Tarjetas destacadas */
+.destacados {
+  padding: 55px 8%;
+  background-color: #faf6f0;
+  text-align: center;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+
+.icono {
+  font-size: 38px;
+}
+
+.tarjeta h3 {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  margin: 15px 0 10px;
+}
+
+.tarjeta p {
+  color: #74675e;
+  line-height: 1.6;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .portada {
+    min-height: 350px;
+    padding: 40px 7%;
+  }
+
+  .sobre-nosotros h2,
+  .destacados h2 {
+    font-size: 27px;
+  }
+
+
+/* Ven a visitarnos */
+.visitanos {
+  padding: 65px 8%;
+  text-align: center;
+  background-color: #f2e4d2;
+}
+
+.visitanos h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #493225;
+  margin: 12px 0 35px;
+}
+
+.visitanos__tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .visitanos__tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .visitanos h2 {
+    font-size: 27px;
+  }
+}
+
+}

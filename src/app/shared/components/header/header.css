@@ -1,0 +1,210 @@
+
+/* CABECERA */
+.cabecera {
+  background-color: #f5ebdd;
+  border-bottom: 1px solid #e3d2bd;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+.cabecera__contenido {
+  max-width: 1250px;
+  margin: auto;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* MARCA */
+.cabecera__marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #493225;
+  white-space: nowrap;
+}
+
+.cabecera__logo {
+  font-size: 30px;
+}
+
+.cabecera__titulo {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+/* NAVEGACIÓN */
+.cabecera__nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cabecera__nav a {
+  text-decoration: none;
+  color: #493225;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 13px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.cabecera__nav a:hover,
+.cabecera__nav a.activo {
+  background-color: #e5d3bf;
+}
+
+.cabecera__nav .boton-registro {
+  background-color: #70472f;
+  color: white;
+}
+
+.cabecera__nav .boton-registro:hover {
+  background-color: #4f3020;
+}
+
+/* BOTÓN MENÚ LATERAL */
+.boton-lateral {
+  border: none;
+  background-color: #70472f;
+  color: white;
+  font-size: 23px;
+  border-radius: 7px;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-lateral:hover {
+  background-color: #4f3020;
+}
+
+/* FONDO OSCURO */
+.fondo-lateral {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 20;
+}
+
+/* BARRA LATERAL */
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  max-width: 85%;
+  height: 100vh;
+  background-color: #f5ebdd;
+  padding: 25px;
+  box-sizing: border-box;
+  z-index: 21;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.barra-lateral--abierta {
+  transform: translateX(0);
+}
+
+.barra-lateral__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.barra-lateral__cabecera h2 {
+  color: #493225;
+  font-family: Georgia, serif;
+  font-size: 21px;
+}
+
+.boton-cerrar {
+  border: none;
+  background: none;
+  font-size: 23px;
+  cursor: pointer;
+  color: #493225;
+}
+
+.barra-lateral__descripcion {
+  color: #80634e;
+  margin: 20px 0 30px;
+}
+
+.informacion-local {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.informacion-local__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.informacion-local__item span {
+  font-size: 24px;
+}
+
+.informacion-local__item strong {
+  color: #493225;
+}
+
+.informacion-local__item p {
+  color: #80634e;
+  margin: 5px 0 0;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+@media (max-width: 850px) {
+
+  .cabecera__contenido {
+    flex-wrap: wrap;
+    padding: 15px 18px;
+  }
+
+  .cabecera__nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .cabecera__nav a {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .cabecera__titulo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cabecera__contenido {
+    gap: 12px;
+  }
+
+  .cabecera__titulo {
+    font-size: 17px;
+  }
+
+  .cabecera__logo {
+    font-size: 24px;
+  }
+
+  .cabecera__nav {
+    justify-content: flex-start;
+  }
+}

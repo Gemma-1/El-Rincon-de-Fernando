@@ -1,0 +1,92 @@
+
+<section class="cuenta">
+
+  <div class="cuenta__cabecera">
+    <p class="etiqueta">EL RINCÓN DE FERNANDO</p>
+    <h1>Mi cuenta</h1>
+    <p>¡Nos alegra tenerte por aquí!</p>
+  </div>
+
+  <div class="cuenta__contenido">
+
+    <article class="tarjeta tarjeta__datos">
+      <h2>Mis datos personales</h2>
+
+      <div class="dato">
+        <span>Nombre</span>
+        <strong>{{ nombre }} {{ apellidos }}</strong>
+      </div>
+
+      <div class="dato">
+        <span>Correo electrónico</span>
+        <strong>{{ email }}</strong>
+      </div>
+
+      <div class="dato">
+        <span>Teléfono</span>
+        <strong>{{ telefono }}</strong>
+      </div>
+
+      <p class="nota">
+        Próximamente podrás modificar tus datos personales.
+      </p>
+    </article>
+
+    <article class="tarjeta tarjeta__puntos">
+      <h2>Mi club de puntos</h2>
+
+      <div class="puntos-numero">
+        <strong>{{ puntos }}</strong>
+        <span>puntos</span>
+      </div>
+
+      <p>
+        Te faltan <strong>{{ puntosRestantes }} puntos</strong>
+        para conseguir tu desayuno gratuito.
+      </p>
+
+      <div class="barra-progreso">
+        <div
+          class="barra-progreso__relleno"
+          [style.width.%]="progreso">
+        </div>
+      </div>
+
+      <p class="progreso-texto">
+        {{ puntos }} de {{ puntosNecesarios }} puntos
+      </p>
+
+      <div class="recompensa">
+        <span class="recompensa__icono">☕</span>
+        <div>
+          <strong>Tu próximo premio</strong>
+          <p>Un desayuno gratuito al alcanzar 150 puntos.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="tarjeta tarjeta__qr">
+      <h2>Mi código QR</h2>
+
+      <p>
+        Aquí tendrás tu código QR personal para identificar
+        tu cuenta cuando visites el establecimiento.
+      </p>
+
+      <div class="qr-provisional">
+        <span>QR</span>
+      </div>
+
+      <p class="nota">
+        Código QR provisional. Más adelante generaremos
+        uno único para cada cliente.
+      </p>
+    </article>
+
+  </div>
+
+  <div class="volver">
+    <a routerLink="/home">Volver al inicio</a>
+  </div>
+
+</section>

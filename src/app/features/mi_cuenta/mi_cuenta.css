@@ -1,0 +1,163 @@
+
+.cuenta {
+  padding: 40px 7%;
+  color: #493225;
+}
+
+.cuenta__cabecera {
+  text-align: center;
+  padding: 45px 20px;
+  margin-bottom: 35px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f2e4d2, #d6b99b);
+}
+
+.etiqueta {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.cuenta__cabecera h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.cuenta__contenido {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.tarjeta {
+  background: #faf6f0;
+  border: 1px solid #e5d4c1;
+  border-radius: 15px;
+  padding: 28px;
+  box-shadow: 0 4px 14px rgba(53, 39, 31, 0.07);
+}
+
+.tarjeta h2 {
+  font-family: Georgia, serif;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #70472f;
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5d4c1;
+}
+
+.dato span,
+.nota,
+.progreso-texto {
+  color: #8a7667;
+  font-size: 13px;
+}
+
+.puntos-numero {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.puntos-numero strong {
+  font-size: 55px;
+  color: #98633e;
+  font-family: Georgia, serif;
+}
+
+.barra-progreso {
+  height: 12px;
+  background: #e8d9c8;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.barra-progreso__relleno {
+  height: 100%;
+  background: #98633e;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.recompensa {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f2e4d2;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.recompensa__icono {
+  font-size: 30px;
+}
+
+.recompensa p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.qr-provisional {
+  width: 145px;
+  height: 145px;
+  margin: 25px auto;
+  border: 3px dashed #98633e;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.qr-provisional span {
+  font-size: 35px;
+  font-weight: bold;
+  color: #98633e;
+}
+
+.tarjeta__qr {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.volver {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.volver a {
+  color: #70472f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.volver a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .cuenta__contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta__qr {
+    grid-column: auto;
+  }
+
+  .cuenta__cabecera h1 {
+    font-size: 30px;
+  }
+}

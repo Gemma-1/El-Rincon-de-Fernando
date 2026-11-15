@@ -1,0 +1,99 @@
+
+.carta {
+  color: #35271f;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.carta__portada {
+  background: linear-gradient(120deg, #f2e4d2, #d6b99b);
+  padding: 65px 25px;
+  text-align: center;
+}
+
+.etiqueta {
+  color: #98633e;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.carta__portada h1 {
+  font-family: Georgia, serif;
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.carta__portada > p:last-child {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.carta__contenido {
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.carta__contenido h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+
+/* Secciones de la carta */
+.carta__seccion {
+  max-width: 1100px;
+  margin: 0 auto 65px;
+}
+
+.carta__seccion h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #98633e;
+  margin-bottom: 30px;
+}
+
+/* Galería de fotografías */
+.carta__galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Fotografías originales */
+.carta__imagen {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(53, 39, 31, 0.12);
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+
+  .carta__portada {
+    padding: 45px 20px;
+  }
+
+  .carta__portada h1 {
+    font-size: 36px;
+  }
+
+  .carta__contenido {
+    padding: 40px 15px;
+  }
+
+  .carta__seccion h2 {
+    font-size: 25px;
+  }
+
+  .carta__imagen {
+    border-radius: 5px;
+  }
+
+}
+

@@ -1,0 +1,82 @@
+
+.pie-pagina {
+  background-color: #493225;
+  color: #f5ebdd;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+/* Contenido principal */
+.pie-pagina__contenido {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* Marca */
+.pie-pagina__marca h2 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.pie-pagina__marca p {
+  color: #dfcbb7;
+  line-height: 1.7;
+  max-width: 350px;
+}
+
+/* Enlaces y contacto */
+.pie-pagina__enlaces,
+.pie-pagina__contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pie-pagina__contenido h3 {
+  color: #e3bd98;
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.pie-pagina__enlaces a {
+  color: #f5ebdd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.pie-pagina__enlaces a:hover {
+  color: #e3bd98;
+}
+
+.pie-pagina__contacto p {
+  margin: 0;
+  color: #dfcbb7;
+}
+
+/* Franja inferior */
+.pie-pagina__inferior {
+  border-top: 1px solid rgba(245, 235, 221, 0.2);
+  text-align: center;
+  padding: 18px;
+}
+
+.pie-pagina__inferior p {
+  margin: 0;
+  color: #dfcbb7;
+  font-size: 13px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700px) {
+  .pie-pagina__contenido {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 35px 25px;
+  }
+}
