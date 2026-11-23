@@ -1,59 +1,43 @@
-# MiApp
+1. Introducción y objetivo 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+El proyecto «El rincón de Fernando» es una aplicación web realizada con Angular que representa la página de una cafetería. Su finalidad es presentar el establecimiento, mostrar su carta y ofrecer una zona de usuario con inicio de sesión, registro y consulta de información personal y puntos del club de fidelización. 
 
-## Development server
+2. Funcionamiento general y navegación 
+Al iniciar la aplicación se carga AppComponent. Este componente muestra siempre la cabecera (HeaderComponent), un RouterOutlet donde Angular inserta la página seleccionada y el pie de página (FooterComponent). 
+Las rutas configuradas en app.routes.ts son las siguientes: 
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+3. Descripción de los componentes de página
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+  3.1. Inicio (HomeComponent) 
+  Es la página de bienvenida. Presenta el nombre de la cafetería, una breve descripción y una sección «Sobre nosotros». Incluye tarjetas destacadas que llevan a la carta o a la zona del    club de puntos, además de tarjetas con la dirección y el teléfono del establecimiento. Para construir estas tarjetas utiliza los componentes reutilizables TarjetaDestacadaComponent y     TarjetaInformacionComponent.
 
-## Code scaffolding
+  3.2. Carta (CartaComponent) 
+  Muestra la carta de la cafetería dividida en apartados: desayunos y comida. El contenido se presenta mediante imágenes almacenadas en los recursos estáticos del proyecto. En esta         versión la página es principalmente informativa y no incluye un sistema de pedidos ni selección de productos. 
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+  3.3. Inicio de sesión (LoginComponent) 
+  Contiene un formulario con correo electrónico y contraseña. Los campos están enlazados con las propiedades email y password mediante [(ngModel)]. Al enviar el formulario se ejecuta       iniciarSesion(). Primero comprueba que los campos no estén vacíos y después llama a AuthService para validar las credenciales. Si son correctas, navega a /mi_cuenta; si no, muestra un    mensaje de error. El botón Cancelar limpia los campos y el mensaje. 
+    Creamos una cuenta prototipo para la utilización de distintas funcionalidades de la web:  
+                                Usuario: fernando@email.com 
+                                Contraseña: Fernando123! 
 
-```bash
-ng generate component component-name
-```
+  3.4. Registro (RegistroComponent) 
+  Permite introducir nombre, apellidos, correo, teléfono y dos veces la contraseña. El método registrarUsuario() comprueba que todos los campos estén cumplimentados, que las contraseñas    coincidan y que la contraseña tenga al menos seis caracteres. Si se cumplen estas condiciones, muestra un mensaje de validación correcta. 
+  Importante: en el código actual el formulario valida los datos, pero todavía no crea ni guarda una cuenta real. 
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+  3.5. Mi cuenta (MiCuentaComponent) 
+  Presenta datos personales de ejemplo, los puntos acumulados, el progreso hacia la recompensa y un espacio para un código QR provisional. Los datos actuales están definidos como           propiedades en el componente. El progreso se calcula con los getters puntosRestantes y progreso, que evitan valores negativos y limitan el porcentaje al 100 %. La propia página indica    que la modificación de datos estará disponible próximamente. 
 
-```bash
-ng generate --help
-```
+4. Diseño visual y experiencia de uso 
+La interfaz está dividida en secciones con una identidad común de cafetería. Se utilizan hojas CSS independientes para las páginas y componentes compartidos, además de una hoja de estilos global. La página de inicio prioriza la presentación del establecimiento y las tarjetas permiten acceder rápidamente a contenidos destacados. Los formularios muestran mensajes para orientar al usuario cuando faltan datos o las credenciales no son correctas.
 
-## Building
+5. Conclusión 
+«El rincón de Fernando» presenta una estructura modular en Angular, con cinco componentes de página, navegación mediante Angular Router, componentes compartidos y un servicio central para la sesión. La aplicación permite recorrer la información de la cafetería, consultar la carta, validar formularios y visualizar una zona de cuenta. 
+Próximamente traeremos nuevas mejoras.
 
-To build the project run:
+6. Enlaces del proyecto
+Página web desplegada en Vercel: 
+https://elrincondefernando.vercel.app
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Repositorio del código fuente en GitHub: 
+https://github.com/Gemma-1/El-Rincon-de-Fernando
